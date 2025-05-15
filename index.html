@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>STEMPOWER Fellowship</title>
+  <!-- Import Poppins from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif; /* default font */
+      background: #f5f5f5;
+    }
+    .banner {
+      background-color: #1c4587;
+    }
+    .banner img {
+      width: 90%;
+      max-height: 200px;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      padding: 20px;
+      max-width: 600px;
+    }
+
+    /* Separator line */
+    .separator {
+      height: 1px;
+      background-color: #aaaaaa;
+      width: 100%;
+    }
+
+    /* Navigation bar */
+    .navbar {
+      background-color: #1c4587;
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+    }
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 12px 16px;
+      text-decoration: none;
+    }
+    .navbar a:hover {
+      background-color: #333;
+    }
+    .navbar .icon {
+      display: none;
+    }
+
+    /* Responsive navbar */
+    @media screen and (max-width: 600px) {
+      .navbar a { display: none; }
+      .navbar a.icon {
+        float: right;
+        display: block;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      .navbar.responsive { position: relative; }
+      .navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    }
+
+    .content {
+      padding: 20px;
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Banner -->
+  <div class="banner">
+    <img src="gfx/logo.png" alt="STEMPOWER Banner">
+  </div>
+
+  <!-- Separator line -->
+  <div class="separator"></div>
+
+  <!-- Navigation -->
+  <div class="navbar" id="navbar">
+    <a href="#">Home</a>
+    <a href="https://www.umass.edu/diversitysciences/" target="_blank">Institute of Diversity Sciences</a>
+    <!-- <a href="#">Programs</a> -->
+    <a href="#contact">Questions?</a>
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">&#9776;</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <!-- <h1>Welcome to STEMPOWER.net</h1> -->
+    <!-- <p>This is a placeholder content area under the banner and menu. Add your content here.</p> -->
+
+    <div class="program-info" style="text-align: center; margin-top: 40px;">
+      <h2 style="font-weight: 600; font-size: 20px;">
+        A Research Experience for Undergraduate Students in STEM:
+      </h2>
+      <p style="margin-top: -10px; font-weight: 500;">
+        We also call it the Mini-PhD for Undergrads 😊
+      </p>
+
+      <!-- New announcement line -->
+      <p style="margin-top: 20px; font-weight: 600; font-size: 16px; color: #1c4587;">
+        Fall 2025 Applications for Faculty and Students opening soon in the following departments:
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; max-width: 600px; margin: 30px auto 0;">
+        <div><strong>Computer Science</strong></div>
+        <div><strong>Engineering</strong></div>
+        <div><strong>Mathematics</strong></div>
+        <div><strong>Chemistry</strong></div>
+        <div><strong>Physics</strong></div>
+        <div><strong>Biology</strong></div>
+      </div>
+    </div>
+
+    <div class="organizers" style="text-align: center; margin: 60px auto 40px; max-width: 900px;">
+      <h2 style="font-weight: 600; font-size: 22px; margin-bottom: 30px;">
+        Meet the Organizers
+      </h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 30px; justify-items: center;">
+        <div>
+          <img src="gfx/haehn.jpg" alt="Organizer 1" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid #ccc;">
+          <div style="margin-top: 10px; font-weight: 500;">Daniel Haehn<br>
+          UMass Boston</div>
+        </div>
+        <div>
+          <img src="gfx/hamad.jpg" alt="Organizer 2" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid #ccc;">
+          <div style="margin-top: 10px; font-weight: 500;">Kim Hamad-Schifferli<br>
+          UMass Boston</div>
+        </div>
+        <div>
+          <img src="gfx/duong.png" alt="Organizer 3" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid #ccc;">
+          <div style="margin-top: 10px; font-weight: 500;">Tori Duong<br>UMass Boston</div>
+        </div>
+        <div>
+          <img src="gfx/thota.jpg" alt="Organizer 4" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid #ccc;">
+          <div style="margin-top: 10px; font-weight: 500;">Neena Thota<br>UMass Amherst</div>
+        </div>
+        <div>
+          <img src="gfx/roberts.png" alt="Organizer 5" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid #ccc;">
+          <div style="margin-top: 10px; font-weight: 500;">Shannon Roberts<br>UMass Amherst</div>
+        </div>
+        <div>
+          <img src="gfx/dasgupta.png" alt="Organizer 6" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid #ccc;">
+          <div style="margin-top: 10px; font-weight: 500;">Nilanjana Buju Dasgupta<br>UMass Amherst</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sponsor" style="text-align: center; margin: 60px auto 40px; max-width: 800px; padding: 0 20px;">
+      <p style="font-size: 16px; font-weight: 500; color: #333;">
+        Sponsored by the <strong>Alfred P. Sloan Foundation</strong> as part of<br> the 
+        <em>Exemplary Pathways to STEM Graduate Education</em> initiative.
+      </p>
+    </div>
+
+    <div class="contact-form" style="max-width: 600px; margin: 60px auto; padding: 20px;">
+      <h2 style="text-align: center; font-weight: 600;" id="contact">Contact Us</h2>
+      <form action="mailto:help@stempower.net" method="POST" enctype="text/plain" style="display: flex; flex-direction: column; gap: 15px;">
+        
+        <label for="name" style="font-weight: 500;">Name</label>
+        <input type="text" id="name" name="Name" required
+               style="padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px;">
+        
+        <label for="email" style="font-weight: 500;">Email</label>
+        <input type="email" id="email" name="Email" required
+               style="padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px;">
+        
+        <label for="message" style="font-weight: 500;">Message</label>
+        <textarea id="message" name="Message" rows="5" required
+                  style="padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+        
+        <button type="submit" style="background-color: #1c4587; color: white; padding: 12px; font-size: 16px; border: none; border-radius: 4px; cursor: pointer;">
+          Send Message
+        </button>
+      </form>
+    </div>
+
+
+  </div>
+
+  <script>
+    function toggleMenu() {
+      var x = document.getElementById("navbar");
+      if (x.className === "navbar") {
+        x.className += " responsive";
+      } else {
+        x.className = "navbar";
+      }
+    }
+  </script>
+
+</body>
+</html>
