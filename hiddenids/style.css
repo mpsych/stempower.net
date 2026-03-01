@@ -1,0 +1,96 @@
+body {
+    padding: 0;
+    margin: 0;
+
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-container {
+    width: 80%;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-title {
+    width: 100%;
+    font-size: 32px;
+    text-align: left;
+}
+
+.content-sub {
+    width: 100%;
+    font-size: 14px;
+    text-align: left;
+}
+
+.students {
+    position: relative;
+    padding: 1rem 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.student {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(24,24,24,0.2)
+}
+
+.student .student-info {
+    padding: 0 8px;
+    
+}
+
+.student .student-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    image-rendering: optimizeQuality;
+}
+
+.student .student-name {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.student .student-name:hover {
+    cursor: default;
+    text-decoration: underline;
+}
+
+.student .student-school {
+    font-weight: 100;
+    font-size: 14px;
+}
+
+@media (max-width: 1500px) {
+    .student .student-img {
+        height: 260px;
+    }
+}
+
+@media (max-width: 900px) {
+    .content-title {
+        font-size: 24px;
+    }
+
+    .content-sub {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 720px) {
+    .student .student-img {
+        height: 80%;
+    }
+}
